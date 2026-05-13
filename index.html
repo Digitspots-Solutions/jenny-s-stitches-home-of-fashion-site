@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenny's Stitches (Home of Fashion) - Where Style Meets Craftsmanship</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&family=Karla:wght@300;400;500&display=swap">
+    <style>
+        :root {
+            --color-primary: #13110e;
+            --color-accent: #e72f51;
+            --color-bg: #FAFAF8;
+            --color-text: #1A1614;
+            --color-surface: #231c1a;
+            --color-secondary-accent: #bcaea9;
+            --font-display: 'Work Sans', sans-serif;
+            --font-body: 'Karla', sans-serif;
+            --border-radius: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+            font-family: var(--font-display);
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 47, 81, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #c92643;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(231, 47, 81, 0.4);
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .about-content p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+
+        /* Services Section */
+        #services {
+            padding: 80px 2rem;
+            background: white;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--color-primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--color-accent);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--color-text);
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 80px 2rem;
+            background: var(--color-surface);
+            color: white;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-content p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+
+        .contact-item strong {
+            min-width: 100px;
+            color: var(--color-accent);
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: #c92643;
+            transform: translateY(-2px);
+        }
+
+        .contact-button.whatsapp {
+            background: #25D366;
+        }
+
+        .contact-button.whatsapp:hover {
+            background: #1da851;
+        }
+
+        .contact-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.25rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image,
+            .contact-image {
+                height: 350px;
+            }
+
+            #hero,
+            #about,
+            #services,
+            #contact {
+                padding: 48px 1.5rem;
+            }
+
+            .services-container h2,
+            .about-content h2,
+            .contact-content h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .mobile-menu {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Jenny's Stitches</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="hero">
+        <img src="https://images.pexels.com/photos/13437703/pexels-photo-13437703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Jenny's Stitches Fashion" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Jenny's Stitches</h1>
+            <p class="tagline">Where Style Meets Craftsmanship</p>
+            <p>Welcome to Jenny's Stitches – Home of Fashion. We bring your fashion dreams to life with exquisite designs, quality fabrics, and expert tailoring. From elegant native wear to contemporary styles, we craft garments that make you stand out. Located in the heart of Enugu, we're your trusted partner for all things fashion.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <img src="https://images.pexels.com/photos/17833394/pexels-photo-17833394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="About Jenny's Stitches" class="about-image">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>At Jenny's Stitches, fashion is more than fabric and thread—it's about celebrating your unique style and personality. We are a premier fashion and creative design house based in Enugu, dedicated to delivering exceptional tailoring services and bespoke designs. Whether you're looking for traditional attire for special occasions or modern everyday wear, our skilled team combines creativity with precision to ensure every stitch tells your story. We believe every client deserves to look and feel their absolute best.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Tailoring</h3>
+                    <p>Perfect-fit garments crafted to your exact measurements and style preferences.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Traditional Wear</h3>
+                    <p>Stunning native attire including Aso-Ebi, Ankara styles, George wrappers, and cultural outfits for weddings and special events.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Contemporary Fashion</h3>
+                    <p>Modern casual and corporate wear that keeps you stylish for any occasion.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bridal & Special Occasion Wear</h3>
+                    <p>Breathtaking designs for your most important moments.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fashion Consultation</h3>
+                    <p>Expert advice on styles, fabrics, and designs that complement your personality.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Alterations & Repairs</h3>
+                    <p>Professional adjustments to ensure your existing wardrobe fits perfectly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <h2>Visit Us Today</h2>
+                <p>Ready to elevate your wardrobe? Visit Jenny's Stitches today or reach out to discuss your fashion needs. We're conveniently located in Trans-Ekulu, Enugu, and we're excited to help you look your best.</p>
+                <p>Walk-ins welcome! Let's create something beautiful together.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <strong>Address:</strong>
+                        <span>No 16 Prof Ernest Adibe Street Phase-six Trans-Ekulu, Enugu East, Nigeria</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong>
+                        <a href="tel:08100337959">0810 033 7959</a>
+                    </div>
+                </div>
+                <div class="contact-buttons">
+                    <a href="tel:08100337959" class="contact-button">Call Us</a>
+                    <a href="https://wa.me/2348100337959" target="_blank" class="contact-button whatsapp">WhatsApp Us</a>
+                </div>
+            </div>
+            <img src="https://images.pexels.com/photos/31763620/pexels-photo-31763620.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Visit Jenny's Stitches" class="contact-image">
+        </div>
+    </section>
+
+    <a href="https://wa.me/2348100337959" target="_blank" class="whatsapp-float">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.584 2.138 8.007L.073 31.926l8.138-2.138C10.416 31.262 13.176 32 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.455c-2.433 0-4.822-.66-6.913-1.913l-.495-.293-5.156 1.353 1.376-5.025-.322-.514C2.838 20.964 2.182 18.51 2.182 16c0-7.62 6.198-13.818 13.818-13.818S29.818 8.38 29.818 16 23.62 29.455 16 29.455z"/>
+            <path d="M22.545 18.982c-.371-.185-2.191-1.082-2.531-1.204-.34-.123-.587-.185-.834.185-.247.371-.958 1.204-1.173 1.451-.216.247-.433.278-.804.093-.371-.185-1.567-.578-2.984-1.842-1.103-.982-1.847-2.196-2.062-2.567-.216-.371-.023-.571.162-.756.167-.165.371-.433.556-.649.185-.216.247-.371.371-.618.123-.247.062-.464-.031-.649-.093-.185-.834-2.007-1.142-2.749-.3-.722-.606-.624-.834-.636-.216-.011-.464-.013-.711-.013s-.649.093-.989.464c-.34.371-1.298 1.269-1.298 3.095s1.329 3.589 1.513 3.836c.185.247 2.611 3.989 6.327 5.592.884.381 1.574.609 2.111.78.887.282 1.694.242 2.332.147.711-.106 2.191-.896 2.498-1.76.308-.865.308-1.607.216-1.76-.093-.154-.34-.247-.711-.433z"/>
+        </svg>
+    </a>
+
+    <footer>
+        <p>&copy; 2025 Jenny's Stitches (Home of Fashion). All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
