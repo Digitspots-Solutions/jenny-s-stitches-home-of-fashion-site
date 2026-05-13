@@ -1,0 +1,42 @@
+{
+  "businessName": "Jenny's Stitches (Home of Fashion)",
+  "industry": "Fashion and Creative Design",
+  "tone": "warm, stylish, and approachable",
+  "tagline": "Where Style Meets Craftsmanship",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "copy": "Welcome to Jenny's Stitches – Home of Fashion. We bring your fashion dreams to life with exquisite designs, quality fabrics, and expert tailoring. From elegant native wear to contemporary styles, we craft garments that make you stand out. Located in the heart of Enugu, we're your trusted partner for all things fashion.",
+      "imagePrompt": "Elegant African fashion boutique interior in Enugu Nigeria, featuring colorful traditional fabrics on display, modern tailoring workspace with sewing machines, warm ambient lighting, stylish African woman in beautiful custom outfit smiling, sophisticated and inviting atmosphere, photorealistic, high quality",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "At Jenny's Stitches, fashion is more than fabric and thread—it's about celebrating your unique style and personality. We are a premier fashion and creative design house based in Enugu, dedicated to delivering exceptional tailoring services and bespoke designs. Whether you're looking for traditional attire for special occasions or modern everyday wear, our skilled team combines creativity with precision to ensure every stitch tells your story. We believe every client deserves to look and feel their absolute best.",
+      "imagePrompt": "Professional Nigerian fashion designer measuring fabric on elegant African client in modern boutique, colorful native fabrics in background, fashion sketches on wall, natural lighting through windows, warm and professional atmosphere, photorealistic detail",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "Custom Tailoring: Perfect-fit garments crafted to your exact measurements and style preferences.\n\nTraditional Wear: Stunning native attire including Aso-Ebi, Ankara styles, George wrappers, and cultural outfits for weddings and special events.\n\nContemporary Fashion: Modern casual and corporate wear that keeps you stylish for any occasion.\n\nBridal & Special Occasion Wear: Breathtaking designs for your most important moments.\n\nFashion Consultation: Expert advice on styles, fabrics, and designs that complement your personality.\n\nAlterations & Repairs: Professional adjustments to ensure your existing wardrobe fits perfectly.",
+      "imagePrompt": "Beautiful collage of Nigerian fashion pieces including colorful Ankara dresses, elegant George wrapper outfits, modern corporate wear, traditional wedding attire, displayed on mannequins and hangers in upscale boutique setting, vibrant colors, professional photography, high detail",
+      "layout": "grid"
+    },
+    {
+      "id": "contact",
+      "name": "Visit Us Today",
+      "copy": "Ready to elevate your wardrobe? Visit Jenny's Stitches today or reach out to discuss your fashion needs. We're conveniently located in Trans-Ekulu, Enugu, and we're excited to help you look your best.\n\nNo 16 Prof Ernest Adibe Street Phase-six Trans-Ekulu, Enugu East, Nigeria\n\nCall or WhatsApp: 0810 033 7959\n\nWalk-ins welcome! Let's create something beautiful together.",
+      "imagePrompt": "Welcoming Nigerian fashion boutique storefront in Enugu residential area, well-maintained building with attractive signage, greenery around, bright daylight, inviting entrance with fashion display in window, professional and accessible appearance, photorealistic",
+      "layout": "default"
+    }
+  ],
+  "contact": {
+    "phone": "0810 033 7959",
+    "email": "",
+    "address": "No 16 Prof Ernest Adibe Street Phase-six Trans-Ekulu, Enugu East, Nigeria",
+    "whatsapp": "https://wa.me/2348100337959"
+  }
+}
