@@ -1,42 +1,49 @@
 {
-  "businessName": "Jenny's Stitches (Home of Fashion)",
-  "industry": "Fashion and Creative Design",
-  "tone": "warm, stylish, and approachable",
-  "tagline": "Where Style Meets Craftsmanship",
+  "businessName": "Beauties Bespoke Card Issuing Solutions",
+  "industry": "Fintech",
+  "tone": "professional",
+  "tagline": "Seamless Virtual Card Solutions for Modern Nigerian Businesses",
   "sections": [
     {
       "id": "hero",
       "name": "Hero",
-      "copy": "Welcome to Jenny's Stitches – Home of Fashion. We bring your fashion dreams to life with exquisite designs, quality fabrics, and expert tailoring. From elegant native wear to contemporary styles, we craft garments that make you stand out. Located in the heart of Enugu, we're your trusted partner for all things fashion.",
-      "imagePrompt": "Elegant African fashion boutique interior in Enugu Nigeria, featuring colorful traditional fabrics on display, modern tailoring workspace with sewing machines, warm ambient lighting, stylish African woman in beautiful custom outfit smiling, sophisticated and inviting atmosphere, photorealistic, high quality",
+      "copy": "Welcome to Beauties Bespoke Card Issuing Solutions - Your trusted partner for secure, flexible virtual card solutions in Nigeria. We empower businesses with instant card issuance, robust security, and seamless payment infrastructure tailored for the Nigerian market.",
+      "imagePrompt": "Modern Nigerian fintech office environment with professionals working on laptops, sleek glass surfaces with digital payment icons floating holographically, warm natural lighting, Lagos or Enugu cityscape visible through windows, photorealistic, corporate yet approachable atmosphere",
       "layout": "centered"
     },
     {
       "id": "about",
       "name": "About Us",
-      "copy": "At Jenny's Stitches, fashion is more than fabric and thread—it's about celebrating your unique style and personality. We are a premier fashion and creative design house based in Enugu, dedicated to delivering exceptional tailoring services and bespoke designs. Whether you're looking for traditional attire for special occasions or modern everyday wear, our skilled team combines creativity with precision to ensure every stitch tells your story. We believe every client deserves to look and feel their absolute best.",
-      "imagePrompt": "Professional Nigerian fashion designer measuring fabric on elegant African client in modern boutique, colorful native fabrics in background, fashion sketches on wall, natural lighting through windows, warm and professional atmosphere, photorealistic detail",
+      "copy": "Beauties Bespoke Card Issuing Solutions is a leading Nigerian fintech company specializing in virtual card technology and payment infrastructure. Founded by a seasoned RegTech Consultant, we understand the unique compliance and operational challenges facing Nigerian businesses today. Our mission is to provide secure, compliant, and user-friendly virtual card solutions that enable businesses to transact confidently in the digital economy. From startups to established enterprises, we deliver tailored card issuing platforms that integrate seamlessly with your existing systems while maintaining the highest standards of regulatory compliance.",
+      "imagePrompt": "Professional Nigerian fintech team in a modern Enugu office, diverse group collaborating around a conference table with digital screens showing payment dashboards, natural lighting, contemporary African office interior design, photorealistic corporate photography style",
       "layout": "split"
     },
     {
       "id": "services",
       "name": "Our Services",
-      "copy": "Custom Tailoring: Perfect-fit garments crafted to your exact measurements and style preferences.\n\nTraditional Wear: Stunning native attire including Aso-Ebi, Ankara styles, George wrappers, and cultural outfits for weddings and special events.\n\nContemporary Fashion: Modern casual and corporate wear that keeps you stylish for any occasion.\n\nBridal & Special Occasion Wear: Breathtaking designs for your most important moments.\n\nFashion Consultation: Expert advice on styles, fabrics, and designs that complement your personality.\n\nAlterations & Repairs: Professional adjustments to ensure your existing wardrobe fits perfectly.",
-      "imagePrompt": "Beautiful collage of Nigerian fashion pieces including colorful Ankara dresses, elegant George wrapper outfits, modern corporate wear, traditional wedding attire, displayed on mannequins and hangers in upscale boutique setting, vibrant colors, professional photography, high detail",
+      "copy": "**Virtual Card Issuance** - Instant generation of secure virtual cards for online transactions, subscriptions, and digital payments across global platforms.\n\n**Business Card Solutions** - Customized corporate card programs with spending controls, real-time monitoring, and detailed reporting for Nigerian businesses.\n\n**Payment Infrastructure Integration** - Seamless API integration with your existing business systems, e-commerce platforms, and accounting software.\n\n**Compliance & Security Consulting** - Expert RegTech guidance ensuring your payment operations meet CBN regulations and international security standards.\n\n**White-Label Card Programs** - Branded virtual card solutions for businesses looking to offer payment services to their customers.\n\n**Transaction Monitoring** - Real-time analytics and fraud detection systems protecting your business from unauthorized transactions.",
+      "imagePrompt": "Split-screen composition showing virtual credit cards floating digitally on one side and Nigerian business professionals using smartphones for payments on the other, modern fintech interface elements, secure lock icons, vibrant blue and green color scheme, photorealistic digital illustration",
       "layout": "grid"
     },
     {
+      "id": "why-choose-us",
+      "name": "Why Choose Beauties Bespoke",
+      "copy": "**RegTech Expertise** - Led by a certified RegTech Consultant with deep knowledge of Nigerian financial regulations and compliance requirements.\n\n**Local Understanding** - Built specifically for the Nigerian market, addressing unique challenges like currency conversion, cross-border payments, and local compliance.\n\n**Instant Deployment** - Get your virtual cards issued within minutes, not days. Our streamlined processes eliminate traditional banking delays.\n\n**Robust Security** - Bank-grade encryption, multi-factor authentication, and real-time fraud monitoring protect every transaction.\n\n**Transparent Pricing** - Clear, competitive rates in Naira with no hidden fees. You always know exactly what you're paying.\n\n**24/7 Support** - Our Enugu-based team provides round-the-clock technical support and customer service in your timezone.",
+      "imagePrompt": "Confident Nigerian business owner smiling while reviewing financial dashboard on tablet, modern office in Enugu with awards and certifications on wall, warm professional lighting, security shield icons subtly integrated, photorealistic corporate portrait style",
+      "layout": "cards"
+    },
+    {
       "id": "contact",
-      "name": "Visit Us Today",
-      "copy": "Ready to elevate your wardrobe? Visit Jenny's Stitches today or reach out to discuss your fashion needs. We're conveniently located in Trans-Ekulu, Enugu, and we're excited to help you look your best.\n\nNo 16 Prof Ernest Adibe Street Phase-six Trans-Ekulu, Enugu East, Nigeria\n\nCall or WhatsApp: 0810 033 7959\n\nWalk-ins welcome! Let's create something beautiful together.",
-      "imagePrompt": "Welcoming Nigerian fashion boutique storefront in Enugu residential area, well-maintained building with attractive signage, greenery around, bright daylight, inviting entrance with fashion display in window, professional and accessible appearance, photorealistic",
-      "layout": "default"
+      "name": "Get Started Today",
+      "copy": "Ready to transform your business payments with secure virtual card solutions? Contact Beauties Bespoke Card Issuing Solutions today. Our team is here to answer your questions and help you choose the perfect card issuing solution for your business needs.\n\nVisit our office in Enugu or reach out via phone, email, or WhatsApp. We look forward to partnering with you to build a more secure and efficient payment future for your business.",
+      "imagePrompt": "Modern minimalist contact section background featuring subtle Nigerian fintech elements, abstract geometric shapes in professional blue and green tones, faint map outline of Enugu, clean professional aesthetic, photorealistic with soft gradient lighting",
+      "layout": "centered"
     }
   ],
   "contact": {
-    "phone": "0810 033 7959",
-    "email": "",
-    "address": "No 16 Prof Ernest Adibe Street Phase-six Trans-Ekulu, Enugu East, Nigeria",
+    "phone": "+234 810 033 7959",
+    "email": "info@beautiesbespoke.com",
+    "address": "No 16 Prof Ernest Adibe Street, Phase-Six Trans-Ekulu, Enugu East, Enugu State, Nigeria",
     "whatsapp": "https://wa.me/2348100337959"
   }
 }
